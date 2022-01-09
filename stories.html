@@ -1,0 +1,1776 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Okeezy</title>
+
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/tailwind.css" />
+    <script defer src="assets/js/alpine.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script>
+      var wow = new WOW({
+        //disabled for mobile
+        mobile: false,
+      });
+      wow.init();
+    </script>
+  </head>
+  <body>
+    <!-- ===== Navbar Start -->
+    <header
+      x-data="
+      {
+        navbarOpen: false,
+      }
+    "
+      class="bg-[#040c21] top-0 left-0 w-full z-10"
+    >
+      <div class="container">
+        <div class="flex items-center relative">
+          <div class="w-60 flex items-center">
+            <a href="index.html" class="inline-block py-4 lg:py-7">
+              <img
+                src="assets/images/logo/logo.png"
+                alt="logo"
+                class="max-w-full"
+              />
+            </a>
+          </div>
+          <div class="w-full flex items-center justify-end">
+            <div>
+              <button
+                @click="navbarOpen = !navbarOpen"
+                :class="navbarOpen && 'navbarTogglerActive' "
+                id="navbarToggler"
+                class="
+                  block
+                  absolute
+                  z-10
+                  right-0
+                  top-1/2
+                  -translate-y-1/2
+                  lg:hidden
+                  focus:ring-2
+                  ring-primary
+                  px-3
+                  py-[6px]
+                  rounded-lg
+                "
+              >
+                <span
+                  :class="navbarOpen && 'top-[7px] rotate-45' "
+                  class="relative w-[30px] h-[2px] my-[6px] block bg-white"
+                ></span>
+                <span
+                  :class="navbarOpen && 'opacity-0' "
+                  class="relative w-[30px] h-[2px] my-[6px] block bg-white"
+                ></span>
+                <span
+                  :class="navbarOpen && 'top-[-8px] rotate-[135deg]' "
+                  class="relative w-[30px] h-[2px] my-[6px] block bg-white"
+                ></span>
+              </button>
+              <nav
+                :class="!navbarOpen && 'hidden' "
+                id="navbarCollapse"
+                class="
+                  absolute
+                  py-5
+                  px-4
+                  bg-black
+                  lg:bg-transparent
+                  shadow
+                  rounded-lg
+                  max-w-[250px]
+                  w-full
+                  lg:max-w-full lg:w-full
+                  right-4
+                  top-full
+                  lg:block lg:static lg:shadow-none
+                "
+              >
+                <ul class="blcok lg:flex">
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="
+                        font-light
+                        text-base text-white
+                        hover:text-gradient2
+                        py-2
+                        px-4
+                        lg:py-3 lg:px-5
+                        block
+                        lg:inline-flex
+                      "
+                    >
+                      Pricing
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="
+                        font-light
+                        text-base text-white
+                        hover:text-gradient2
+                        py-2
+                        px-4
+                        lg:py-3 lg:px-5
+                        block
+                        lg:inline-flex
+                      "
+                    >
+                      Customer service
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="
+                        font-light
+                        text-base text-gradient2
+                        hover:text-gradient2
+                        py-2
+                        px-4
+                        lg:py-3 lg:px-5
+                        block
+                        lg:inline-flex
+                      "
+                    >
+                      User stories
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div
+              class="
+                hidden
+                sm:flex
+                items-center
+                space-x-6
+                md:pl-5
+                pr-16
+                lg:pr-0
+              "
+            >
+              <a
+                href="javascript:void(0)"
+                class="
+                  font-light
+                  text-base text-white
+                  pr-4
+                  pl-5
+                  md:pl-10
+                  py-[10px]
+                  lg:border-l
+                  border-white border-opacity-5
+                  hover:text-gradient2
+                "
+              >
+                Sign in
+              </a>
+              <a
+                href="javascript:void(0)"
+                class="
+                  font-light
+                  text-base text-white
+                  py-[10px]
+                  px-4
+                  rounded
+                  border border-white
+                  transition-all
+                  hover:bg-white hover:text-black
+                "
+              >
+                Sign up now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ===== Navbar End -->
+
+    <!-- ===== Section Start -->
+    <section class="bg-white pt-20 md:pt-24 lg:pt-10 relative z-10">
+      <div class="container">
+        <div class="flex flex-wrap -mx-4">
+          <div class="w-full lg:w-1/2 px-4">
+            <div
+              class="mb-12 max-w-[575px] lg:pt-10 wow fadeInUp"
+              data-wow-delay=".2s"
+            >
+              <h1
+                class="
+                  font-bold
+                  text-black text-3xl
+                  sm:text-4xl
+                  md:text-[54px]
+                  lg:text-[40px]
+                  xl:text-[52px]
+                  leading-tight
+                  sm:leading-tight
+                  lg:leading-tight
+                  md:leading-[60px]
+                  xl:leading-[60px]
+                  mb-6
+                "
+              >
+                Knowledge is Power
+              </h1>
+              <p
+                class="
+                  text-black text-base
+                  md:text-lg
+                  leading-snug
+                  md:leading-snug
+                  mb-3
+                "
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Curabitur ac finibus ipsum, et ullamcorper sapien. Phasellus
+                maximus erat id ante congue, a placerat ipsum congue.
+              </p>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 px-4">
+            <div class="mb-8 lg:-mb-8 wow fadeInUp" data-wow-delay=".2s">
+              <img
+                src="assets/images/story/story-banner.png"
+                alt="illustration"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap -mx-4">
+          <div class="w-full px-4">
+            <div class="mb-10 wow fadeInUp" data-wow-delay=".2s">
+              <h3 class="font-bold text-black text-2xl">Recent stories</h3>
+            </div>
+
+            <div
+              class="
+                bg-white
+                relative
+                z-10
+                md:flex
+                items-center
+                shadow-one
+                rounded-md
+                mb-8
+                wow
+                fadeInUp
+              "
+              data-wow-delay=".2s
+              "
+            >
+              <div
+                class="
+                  md:max-w-[250px]
+                  py-6
+                  px-5
+                  md:pr-0
+                  lg:py-0 lg:px-0 lg:max-w-[350px]
+                  w-full
+                  h-[300px]
+                  md:h-full
+                "
+              >
+                <img
+                  src="assets/images/story/image-01.jpeg"
+                  alt="story image"
+                  class="
+                    w-full
+                    h-full
+                    object-cover object-center
+                    rounded-xl
+                    lg:rounded-none
+                  "
+                />
+              </div>
+              <div
+                class="
+                  w-full
+                  pl-5
+                  lg:pl-10
+                  xl:pl-16
+                  pr-10
+                  md:pt-10
+                  xl:pt-14
+                  pb-10
+                "
+              >
+                <p class="text-sm text-black leadint-snug mb-8">
+                  Sed vulputate imperdiet ullamcorper. Sed eu interdum ligula.
+                  Duis sed quam id orci sagittis lacinia. Phasellus a aliq vuet
+                  turpis. Praesent dignissim lectus tellus, vel pretium sem
+                  iaculis eget. Sed pharetra risus quis semper ullamcorper.
+                  Donec a molestie est, non suscipit odio.
+                </p>
+
+                <h5 class="font-medium text-sm text-black mb-2">
+                  Peter Crouch - Frond-end developer
+                </h5>
+                <div class="flex items-center space-x-[2px]">
+                  <span class="text-orange-400">
+                    <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="text-orange-400">
+                    <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="text-orange-400">
+                    <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="text-orange-400">
+                    <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="text-orange-400">
+                    <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="text-right">
+                  <a
+                    href="javascript:void(0)"
+                    class="
+                      py-3
+                      px-7
+                      inline-flex
+                      items-center
+                      justify-center
+                      font-medium
+                      text-sm text-[#0e162a]
+                      border border-black
+                      rounded-md
+                      transition-all
+                      hover:bg-black hover:text-white
+                    "
+                  >
+                    Read full story
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="
+                bg-white
+                relative
+                z-10
+                md:flex
+                items-center
+                shadow-one
+                rounded-md
+                mb-8
+                wow
+                fadeInUp
+              "
+              data-wow-delay=".2s
+              "
+            >
+              <div
+                class="
+                  md:max-w-[250px]
+                  py-6
+                  px-5
+                  md:pr-0
+                  lg:py-0 lg:px-0 lg:max-w-[350px]
+                  w-full
+                  h-[300px]
+                  md:h-full
+                "
+              >
+                <img
+                  src="assets/images/story/image-01.jpeg"
+                  alt="story image"
+                  class="
+                    w-full
+                    h-full
+                    object-cover object-center
+                    rounded-xl
+                    lg:rounded-none
+                  "
+                />
+              </div>
+              <div
+                class="
+                  w-full
+                  pl-5
+                  lg:pl-10
+                  xl:pl-16
+                  pr-10
+                  md:pt-10
+                  xl:pt-14
+                  pb-10
+                "
+              >
+                <p class="text-sm text-black leadint-snug mb-8">
+                  Sed vulputate imperdiet ullamcorper. Sed eu interdum ligula.
+                  Duis sed quam id orci sagittis lacinia. Phasellus a aliq vuet
+                  turpis. Praesent dignissim lectus tellus, vel pretium sem
+                  iaculis eget. Sed pharetra risus quis semper ullamcorper.
+                  Donec a molestie est, non suscipit odio.
+                </p>
+
+                <h5 class="font-medium text-sm text-black mb-2">
+                  Peter Crouch - Frond-end developer
+                </h5>
+                <div class="flex items-center space-x-[2px]">
+                  <span class="text-orange-400">
+                    <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="text-orange-400">
+                    <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="text-orange-400">
+                    <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="text-orange-400">
+                    <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="text-orange-400">
+                    <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="text-right">
+                  <a
+                    href="javascript:void(0)"
+                    class="
+                      py-3
+                      px-7
+                      inline-flex
+                      items-center
+                      justify-center
+                      font-medium
+                      text-sm text-[#0e162a]
+                      border border-black
+                      rounded-md
+                      transition-all
+                      hover:bg-black hover:text-white
+                    "
+                  >
+                    Read full story
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="
+                bg-white
+                relative
+                z-10
+                md:flex
+                items-center
+                shadow-one
+                rounded-md
+                mb-8
+                wow
+                fadeInUp
+              "
+              data-wow-delay=".2s
+              "
+            >
+              <div
+                class="
+                  md:max-w-[250px]
+                  py-6
+                  px-5
+                  md:pr-0
+                  lg:py-0 lg:px-0 lg:max-w-[350px]
+                  w-full
+                  h-[300px]
+                  md:h-full
+                "
+              >
+                <img
+                  src="assets/images/story/image-01.jpeg"
+                  alt="story image"
+                  class="
+                    w-full
+                    h-full
+                    object-cover object-center
+                    rounded-xl
+                    lg:rounded-none
+                  "
+                />
+              </div>
+              <div
+                class="
+                  w-full
+                  pl-5
+                  lg:pl-10
+                  xl:pl-16
+                  pr-10
+                  md:pt-10
+                  xl:pt-14
+                  pb-10
+                "
+              >
+                <p class="text-sm text-black leadint-snug mb-8">
+                  Sed vulputate imperdiet ullamcorper. Sed eu interdum ligula.
+                  Duis sed quam id orci sagittis lacinia. Phasellus a aliq vuet
+                  turpis. Praesent dignissim lectus tellus, vel pretium sem
+                  iaculis eget. Sed pharetra risus quis semper ullamcorper.
+                  Donec a molestie est, non suscipit odio.
+                </p>
+
+                <h5 class="font-medium text-sm text-black mb-2">
+                  Peter Crouch - Frond-end developer
+                </h5>
+                <div class="flex items-center space-x-[2px]">
+                  <span class="text-orange-400">
+                    <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="text-orange-400">
+                    <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="text-orange-400">
+                    <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="text-orange-400">
+                    <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="text-orange-400">
+                    <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="text-right">
+                  <a
+                    href="javascript:void(0)"
+                    class="
+                      py-3
+                      px-7
+                      inline-flex
+                      items-center
+                      justify-center
+                      font-medium
+                      text-sm text-[#0e162a]
+                      border border-black
+                      rounded-md
+                      transition-all
+                      hover:bg-black hover:text-white
+                    "
+                  >
+                    Read full story
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-[#f3f2f2] absolute w-full h-[200px] -z-10 left-0 bottom-0"
+      ></div>
+    </section>
+    <!-- ===== Section End -->
+
+    <!-- ===== Testimonial Start -->
+    <section class="bg-[#f3f2f2] py-24 lg:py-[150px]">
+      <div class="container">
+        <div
+          class="max-w-[550px] mx-auto text-center wow fadeInUp"
+          data-wow-delay=".2s"
+        >
+          <h2 class="font-bold text-black text-2xl leading-tight mb-9">
+            More stories
+          </h2>
+        </div>
+
+        <div class="flex flex-wrap -mx-4">
+          <div class="w-full md:w-1/2 lg:w-1/3 px-4">
+            <div
+              class="
+                bg-white
+                relative
+                rounded-lg
+                shadow-lg
+                p-5
+                pt-9
+                mb-8
+                wow
+                fadeInUp
+              "
+              data-wow-delay=".2s"
+            >
+              <p class="text-sm text-black leading-relaxed mb-7">
+                Sed vulputate imperdiet ullamcorper. Sed eu interdum ligula.
+                Duis sed quam id orci sagittis lacinia. Phasellus a aliquet
+                turpis. Praesent dignissim lectus tellus, vel pretium sem
+                iaculis eget. Sed pharetra risus quis semper ullamcorper. Donec
+                a molestie est, non suscipit odio.
+              </p>
+
+              <h5 class="font-medium text-sm text-black mb-2">
+                Peter Crouch - Frond-end developer
+              </h5>
+              <div class="flex items-center space-x-[2px]">
+                <span class="text-orange-400">
+                  <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                    />
+                  </svg>
+                </span>
+                <span class="text-orange-400">
+                  <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                    />
+                  </svg>
+                </span>
+                <span class="text-orange-400">
+                  <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                    />
+                  </svg>
+                </span>
+                <span class="text-orange-400">
+                  <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                    />
+                  </svg>
+                </span>
+                <span class="text-orange-400">
+                  <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                    />
+                  </svg>
+                </span>
+              </div>
+
+              <a
+                href="javascript:void(0)"
+                class="
+                  absolute
+                  z-10
+                  right-3
+                  bottom-3
+                  w-8
+                  h-8
+                  rounded-md
+                  border border-black
+                  text-black
+                  flex
+                  items-center
+                  justify-center
+                  transition-all
+                  hover:bg-black hover:text-white
+                "
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2.5"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/3 px-4">
+            <div
+              class="
+                bg-white
+                relative
+                rounded-lg
+                shadow-lg
+                p-5
+                pt-9
+                mb-8
+                wow
+                fadeInUp
+              "
+              data-wow-delay=".2s"
+            >
+              <p class="text-sm text-black leading-relaxed mb-7">
+                Sed vulputate imperdiet ullamcorper. Sed eu interdum ligula.
+                Duis sed quam id orci sagittis lacinia. Phasellus a aliquet
+                turpis. Praesent dignissim lectus tellus, vel pretium sem
+                iaculis eget. Sed pharetra risus quis semper ullamcorper. Donec
+                a molestie est, non suscipit odio.
+              </p>
+
+              <h5 class="font-medium text-sm text-black mb-2">
+                Peter Crouch - Frond-end developer
+              </h5>
+              <div class="flex items-center space-x-[2px]">
+                <span class="text-orange-400">
+                  <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                    />
+                  </svg>
+                </span>
+                <span class="text-orange-400">
+                  <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                    />
+                  </svg>
+                </span>
+                <span class="text-orange-400">
+                  <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                    />
+                  </svg>
+                </span>
+                <span class="text-orange-400">
+                  <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                    />
+                  </svg>
+                </span>
+                <span class="text-orange-400">
+                  <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                    />
+                  </svg>
+                </span>
+              </div>
+
+              <a
+                href="javascript:void(0)"
+                class="
+                  absolute
+                  z-10
+                  right-3
+                  bottom-3
+                  w-8
+                  h-8
+                  rounded-md
+                  border border-black
+                  text-black
+                  flex
+                  items-center
+                  justify-center
+                  transition-all
+                  hover:bg-black hover:text-white
+                "
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2.5"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/3 px-4">
+            <div
+              class="
+                bg-white
+                relative
+                rounded-lg
+                shadow-lg
+                p-5
+                pt-9
+                mb-8
+                wow
+                fadeInUp
+              "
+              data-wow-delay=".2s"
+            >
+              <p class="text-sm text-black leading-relaxed mb-7">
+                Sed vulputate imperdiet ullamcorper. Sed eu interdum ligula.
+                Duis sed quam id orci sagittis lacinia. Phasellus a aliquet
+                turpis. Praesent dignissim lectus tellus, vel pretium sem
+                iaculis eget. Sed pharetra risus quis semper ullamcorper. Donec
+                a molestie est, non suscipit odio.
+              </p>
+
+              <h5 class="font-medium text-sm text-black mb-2">
+                Peter Crouch - Frond-end developer
+              </h5>
+              <div class="flex items-center space-x-[2px]">
+                <span class="text-orange-400">
+                  <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                    />
+                  </svg>
+                </span>
+                <span class="text-orange-400">
+                  <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                    />
+                  </svg>
+                </span>
+                <span class="text-orange-400">
+                  <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                    />
+                  </svg>
+                </span>
+                <span class="text-orange-400">
+                  <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                    />
+                  </svg>
+                </span>
+                <span class="text-orange-400">
+                  <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                    />
+                  </svg>
+                </span>
+              </div>
+
+              <a
+                href="javascript:void(0)"
+                class="
+                  absolute
+                  z-10
+                  right-3
+                  bottom-3
+                  w-8
+                  h-8
+                  rounded-md
+                  border border-black
+                  text-black
+                  flex
+                  items-center
+                  justify-center
+                  transition-all
+                  hover:bg-black hover:text-white
+                "
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2.5"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/3 px-4">
+            <div
+              class="
+                bg-white
+                relative
+                rounded-lg
+                shadow-lg
+                p-5
+                pt-9
+                mb-8
+                wow
+                fadeInUp
+              "
+              data-wow-delay=".2s"
+            >
+              <p class="text-sm text-black leading-relaxed mb-7">
+                Sed vulputate imperdiet ullamcorper. Sed eu interdum ligula.
+                Duis sed quam id orci sagittis lacinia. Phasellus a aliquet
+                turpis. Praesent dignissim lectus tellus, vel pretium sem
+                iaculis eget. Sed pharetra risus quis semper ullamcorper. Donec
+                a molestie est, non suscipit odio.
+              </p>
+
+              <h5 class="font-medium text-sm text-black mb-2">
+                Peter Crouch - Frond-end developer
+              </h5>
+              <div class="flex items-center space-x-[2px]">
+                <span class="text-orange-400">
+                  <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                    />
+                  </svg>
+                </span>
+                <span class="text-orange-400">
+                  <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                    />
+                  </svg>
+                </span>
+                <span class="text-orange-400">
+                  <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                    />
+                  </svg>
+                </span>
+                <span class="text-orange-400">
+                  <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                    />
+                  </svg>
+                </span>
+                <span class="text-orange-400">
+                  <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                    />
+                  </svg>
+                </span>
+              </div>
+
+              <a
+                href="javascript:void(0)"
+                class="
+                  absolute
+                  z-10
+                  right-3
+                  bottom-3
+                  w-8
+                  h-8
+                  rounded-md
+                  border border-black
+                  text-black
+                  flex
+                  items-center
+                  justify-center
+                  transition-all
+                  hover:bg-black hover:text-white
+                "
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2.5"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/3 px-4">
+            <div
+              class="
+                bg-white
+                relative
+                rounded-lg
+                shadow-lg
+                p-5
+                pt-9
+                mb-8
+                wow
+                fadeInUp
+              "
+              data-wow-delay=".2s"
+            >
+              <p class="text-sm text-black leading-relaxed mb-7">
+                Sed vulputate imperdiet ullamcorper. Sed eu interdum ligula.
+                Duis sed quam id orci sagittis lacinia. Phasellus a aliquet
+                turpis. Praesent dignissim lectus tellus, vel pretium sem
+                iaculis eget. Sed pharetra risus quis semper ullamcorper. Donec
+                a molestie est, non suscipit odio.
+              </p>
+
+              <h5 class="font-medium text-sm text-black mb-2">
+                Peter Crouch - Frond-end developer
+              </h5>
+              <div class="flex items-center space-x-[2px]">
+                <span class="text-orange-400">
+                  <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                    />
+                  </svg>
+                </span>
+                <span class="text-orange-400">
+                  <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                    />
+                  </svg>
+                </span>
+                <span class="text-orange-400">
+                  <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                    />
+                  </svg>
+                </span>
+                <span class="text-orange-400">
+                  <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                    />
+                  </svg>
+                </span>
+                <span class="text-orange-400">
+                  <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                    />
+                  </svg>
+                </span>
+              </div>
+
+              <a
+                href="javascript:void(0)"
+                class="
+                  absolute
+                  z-10
+                  right-3
+                  bottom-3
+                  w-8
+                  h-8
+                  rounded-md
+                  border border-black
+                  text-black
+                  flex
+                  items-center
+                  justify-center
+                  transition-all
+                  hover:bg-black hover:text-white
+                "
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2.5"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/3 px-4">
+            <div
+              class="
+                bg-white
+                relative
+                rounded-lg
+                shadow-lg
+                p-5
+                pt-9
+                mb-8
+                wow
+                fadeInUp
+              "
+              data-wow-delay=".2s"
+            >
+              <p class="text-sm text-black leading-relaxed mb-7">
+                Sed vulputate imperdiet ullamcorper. Sed eu interdum ligula.
+                Duis sed quam id orci sagittis lacinia. Phasellus a aliquet
+                turpis. Praesent dignissim lectus tellus, vel pretium sem
+                iaculis eget. Sed pharetra risus quis semper ullamcorper. Donec
+                a molestie est, non suscipit odio.
+              </p>
+
+              <h5 class="font-medium text-sm text-black mb-2">
+                Peter Crouch - Frond-end developer
+              </h5>
+              <div class="flex items-center space-x-[2px]">
+                <span class="text-orange-400">
+                  <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                    />
+                  </svg>
+                </span>
+                <span class="text-orange-400">
+                  <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                    />
+                  </svg>
+                </span>
+                <span class="text-orange-400">
+                  <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                    />
+                  </svg>
+                </span>
+                <span class="text-orange-400">
+                  <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                    />
+                  </svg>
+                </span>
+                <span class="text-orange-400">
+                  <svg class="fill-current w-4 h-4" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"
+                    />
+                  </svg>
+                </span>
+              </div>
+
+              <a
+                href="javascript:void(0)"
+                class="
+                  absolute
+                  z-10
+                  right-3
+                  bottom-3
+                  w-8
+                  h-8
+                  rounded-md
+                  border border-black
+                  text-black
+                  flex
+                  items-center
+                  justify-center
+                  transition-all
+                  hover:bg-black hover:text-white
+                "
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2.5"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="w-full px-4">
+            <div
+              class="text-center pt-8 md:pt-12 lg:pt-16 xl:pt-28 wow fadeInUp"
+              data-wow-delay=".2s"
+            >
+              <a
+                href="javascript:void(0)"
+                class="
+                  py-4
+                  px-10
+                  inline-flex
+                  items-center
+                  justify-center
+                  font-medium
+                  text-base text-[#0e162a]
+                  border border-black
+                  rounded-md
+                  transition-all
+                  hover:bg-black hover:text-white
+                "
+              >
+                Show more stories
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== Testimonial End -->
+
+    <!-- ===== CTA Start -->
+    <section
+      class="relative bg-cover bg-center pt-[100px] overflow-hidden"
+      style="background-image: url('./assets/images/cta/cta-bg.jpeg')"
+    >
+      <div class="container relative z-10">
+        <div class="flex flex-wrap -mx-4">
+          <div class="w-full lg:w-7/12 xl:w-8/12 px-4">
+            <div class="pb-20 lg:pb-[120px] wow fadeInUp" data-wow-delay=".2s">
+              <h1
+                class="
+                  font-bold
+                  text-white text-3xl
+                  sm:text-4xl
+                  md:text-[48px]
+                  lg:text-[38px]
+                  xl:text-[52px]
+                  leading-tight
+                  sm:leading-tight
+                  md:leading-tight
+                  lg:leading-tight
+                  xl:leading-tight
+                  mb-6
+                  max-w-[800px]
+                "
+              >
+                Are you ready to automate your release flow?
+              </h1>
+              <p
+                class="
+                  font-light
+                  text-white text-base
+                  md:text-lg
+                  leading-snug
+                  md:leading-snug
+                  mb-8
+                  lg:max-w-[450px]
+                  xl:max-w-[520px]
+                "
+              >
+                Sign up today connect your git repository and we will have your
+                website up and running within minutes!
+              </p>
+              <a
+                href="javascript:void(0)"
+                class="
+                  inline-flex
+                  items-center
+                  justify-center
+                  font-medium
+                  text-base text-black
+                  py-4
+                  px-10
+                  rounded-lg
+                  gradient-btn
+                "
+              >
+                Sign up now
+              </a>
+            </div>
+          </div>
+          <div class="w-full px-4">
+            <div
+              class="
+                relative
+                lg:w-1/2
+                xl:w-1/2
+                lg:absolute
+                -z-10
+                right-0
+                lg:bottom-[-155px]
+                wow
+                fadeInUp
+              "
+              data-wow-delay=".2s
+              "
+            >
+              <img src="assets/images/cta/cta-image.png" alt="cta image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== CTA End -->
+
+    <!-- ===== Footer Start -->
+    <footer>
+      <div class="bg-[#030b21] pt-[75px]">
+        <div class="container relative">
+          <div class="flex flex-wrap -mx-4">
+            <div class="w-full px-4">
+              <div class="mb-14 wow fadeInUp" data-wow-delay=".2s">
+                <a href="index.html" class="inline-block">
+                  <img
+                    src="assets/images/logo/logo.png"
+                    alt="logo"
+                    class="max-w-full"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="w-full sm:w-1/2 lg:w-1/4 px-4">
+              <div class="mb-12 wow fadeInUp" data-wow-delay=".2s">
+                <h3 class="font-semibold text-sm text-white mb-3">Okeezy</h3>
+                <ul class="space-y-[10px]">
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="
+                        inline-block
+                        font-light
+                        text-sm text-white
+                        hover:text-gradient2
+                      "
+                    >
+                      Pricing
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="
+                        inline-block
+                        font-light
+                        text-sm text-white
+                        hover:text-gradient2
+                      "
+                    >
+                      Customerservice
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="
+                        inline-block
+                        font-light
+                        text-sm text-white
+                        hover:text-gradient2
+                      "
+                    >
+                      User stories
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="
+                        inline-block
+                        font-light
+                        text-sm text-white
+                        hover:text-gradient2
+                      "
+                    >
+                      Login
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="w-full sm:w-1/2 lg:w-1/4 px-4">
+              <div class="mb-12 wow fadeInUp" data-wow-delay=".2s">
+                <h3 class="font-semibold text-sm text-white mb-3">
+                  Quick Link
+                </h3>
+                <ul class="space-y-[10px]">
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="
+                        inline-block
+                        font-light
+                        text-sm text-white
+                        hover:text-gradient2
+                      "
+                    >
+                      Free website hosting
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="
+                        inline-block
+                        font-light
+                        text-sm text-white
+                        hover:text-gradient2
+                      "
+                    >
+                      Free php hosting
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="
+                        inline-block
+                        font-light
+                        text-sm text-white
+                        hover:text-gradient2
+                      "
+                    >
+                      FTP server
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="
+                        inline-block
+                        font-light
+                        text-sm text-white
+                        hover:text-gradient2
+                      "
+                    >
+                      Host static website
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="w-full sm:w-1/2 lg:w-1/4 px-4">
+              <div class="mb-12 wow fadeInUp" data-wow-delay=".2s">
+                <h3 class="font-semibold text-sm text-white mb-3">
+                  Help & Support
+                </h3>
+                <ul class="space-y-[10px]">
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="
+                        inline-block
+                        font-light
+                        text-sm text-white
+                        hover:text-gradient2
+                      "
+                    >
+                      Getting started with git
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="
+                        inline-block
+                        font-light
+                        text-sm text-white
+                        hover:text-gradient2
+                      "
+                    >
+                      Support
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="
+                        inline-block
+                        font-light
+                        text-sm text-white
+                        hover:text-gradient2
+                      "
+                    >
+                      Pricing
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="
+                        inline-block
+                        font-light
+                        text-sm text-white
+                        hover:text-gradient2
+                      "
+                    >
+                      Terms and Condition
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="
+                        inline-block
+                        font-light
+                        text-sm text-white
+                        hover:text-gradient2
+                      "
+                    >
+                      Privacy
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="w-full sm:w-1/2 lg:w-1/4 px-4">
+              <div class="mb-12 wow fadeInUp" data-wow-delay=".2s">
+                <h3 class="font-semibold text-sm text-white mb-3">
+                  Follow us on social media!
+                </h3>
+                <ul class="flex items-center space-x-[10px]">
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="
+                        inline-flex
+                        items-center
+                        justify-center
+                        w-8
+                        h-8
+                        rounded-full
+                        bg-white
+                        text-black
+                        hover:bg-gradient1
+                      "
+                    >
+                      <svg
+                        class="fill-current w-[18px] h-[18px]"
+                        viewBox="0 0 64 64"
+                      >
+                        <path
+                          d="M47.4,25.8L47.4,25.8h-5.6h-2v-2v-6.2v-2h2H46c1.1,0,2-0.8,2-2V3c0-1.1-0.8-2-2-2h-7.3c-7.9,0-13.4,5.6-13.4,13.9v8.7v2h-2
+                      h-6.8c-1.4,0-2.7,1.1-2.7,2.7v7.2c0,1.4,1.1,2.7,2.7,2.7h6.6h2v2v20.1c0,1.4,1.1,2.7,2.7,2.7h9.4c0.6,0,1.1-0.3,1.5-0.7
+                      s0.7-1.1,0.7-1.7l0,0l0,0V40.3v-2h2.1H46c1.3,0,2.3-0.8,2.5-2v-0.1v-0.1l1.4-6.9c0.1-0.7,0-1.5-0.6-2.3
+                      C49.1,26.4,48.2,25.9,47.4,25.8z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="
+                        inline-flex
+                        items-center
+                        justify-center
+                        w-8
+                        h-8
+                        rounded-full
+                        bg-white
+                        text-black
+                        hover:bg-gradient1
+                      "
+                    >
+                      <svg viewBox="0 0 24 24" class="fill-current w-5 h-5">
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path
+                          d="M7.752 5.439l10.508 6.13a.5.5 0 0 1 0 .863l-10.508 6.13A.5.5 0 0 1 7 18.128V5.871a.5.5 0 0 1 .752-.432z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="
+                        inline-flex
+                        items-center
+                        justify-center
+                        w-8
+                        h-8
+                        rounded-full
+                        bg-white
+                        text-black
+                        hover:bg-gradient1
+                      "
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        class="fill-current w-[18px] h-18px]"
+                      >
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path
+                          d="M11.871 21.764c-1.19 0-1.984-.561-2.693-1.056-.503-.357-.976-.696-1.533-.79a4.568 4.568 0 0 0-.803-.066c-.472 0-.847.071-1.114.125-.17.03-.312.058-.424.058-.116 0-.263-.032-.32-.228-.05-.16-.081-.312-.112-.459-.08-.37-.147-.597-.286-.62-1.489-.227-2.38-.57-2.554-.976-.014-.044-.031-.09-.031-.125-.01-.125.08-.227.205-.25 1.181-.196 2.242-.824 3.138-1.858.696-.803 1.035-1.579 1.066-1.663 0-.01.009-.01.009-.01.17-.351.205-.65.102-.895-.191-.46-.825-.656-1.257-.79-.111-.03-.205-.066-.285-.093-.37-.147-.986-.46-.905-.892.058-.312.472-.535.811-.535.094 0 .174.014.24.05.38.173.723.262 1.017.262.366 0 .54-.138.584-.182a24.93 24.93 0 0 0-.035-.593c-.09-1.365-.192-3.059.24-4.03 1.298-2.907 4.053-3.14 4.869-3.14L12.156 3h.05c.815 0 3.57.227 4.868 3.139.437.971.33 2.67.24 4.03l-.008.067c-.01.182-.023.356-.032.535.045.035.205.169.535.173.286-.008.598-.102.954-.263a.804.804 0 0 1 .312-.066c.125 0 .25.03.357.066h.009c.299.112.495.321.495.54.009.205-.152.517-.914.825-.08.03-.174.067-.285.093-.424.13-1.057.335-1.258.79-.111.24-.066.548.103.895 0 .01.009.01.009.01.049.124 1.337 3.049 4.204 3.526a.246.246 0 0 1 .205.25c0 .044-.009.089-.031.129-.174.41-1.057.744-2.555.976-.138.022-.205.25-.285.62a6.831 6.831 0 0 1-.112.459c-.044.147-.138.227-.298.227h-.023c-.102 0-.24-.013-.423-.049a5.285 5.285 0 0 0-1.115-.116c-.263 0-.535.023-.802.067-.553.09-1.03.433-1.534.79-.717.49-1.515 1.051-2.697 1.051h-.254z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="
+                        inline-flex
+                        items-center
+                        justify-center
+                        w-8
+                        h-8
+                        rounded-full
+                        bg-white
+                        text-black
+                        hover:bg-gradient1
+                      "
+                    >
+                      <svg
+                        class="fill-current w-[18px] h-[18px]"
+                        viewBox="0 0 64 64"
+                      >
+                        <path
+                          d="M55.619 1H8.38095C4.3111 1 1 4.3111 1 8.38095V55.619C1 59.6889 4.3111 63 8.38095 63H55.619C59.6889 63 63 59.6889 63 55.619V8.38095C63 4.3111 59.6889 1 55.619 1ZM49.7231 28.0482C49.3846 28.0811 49.0447 28.0984 48.7046 28.0999C46.8681 28.1002 45.0604 27.6431 43.4448 26.7699C41.8291 25.8968 40.4563 24.635 39.4503 23.0986V40.1294C39.4503 42.6189 38.7121 45.0526 37.329 47.1226C35.9458 49.1926 33.9799 50.806 31.6799 51.7587C29.3798 52.7114 26.8489 52.9607 24.4072 52.475C21.9654 51.9893 19.7226 50.7905 17.9622 49.0301C16.2018 47.2697 15.0029 45.0268 14.5172 42.5851C14.0316 40.1433 14.2808 37.6124 15.2335 35.3124C16.1863 33.0123 17.7996 31.0464 19.8696 29.6633C21.9396 28.2801 24.3733 27.5419 26.8629 27.5419C27.1256 27.5419 27.3825 27.5655 27.6408 27.5818V33.7847C27.3825 33.7537 27.1286 33.7065 26.8629 33.7065C25.159 33.7065 23.5249 34.3833 22.3201 35.5881C21.1153 36.7929 20.4385 38.427 20.4385 40.1309C20.4385 41.8347 21.1153 43.4688 22.3201 44.6736C23.5249 45.8784 25.159 46.5552 26.8629 46.5552C30.4116 46.5552 33.5456 43.7593 33.5456 40.2106L33.6076 11.2861H39.5419C39.813 13.8645 40.9818 16.2656 42.844 18.0696C44.7062 19.8735 47.1433 20.9654 49.729 21.1544V28.0482"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="absolute z-10 -top-24 right-14">
+            <img src="assets/images/cta/icons.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-[#08122d] py-8">
+        <div class="container">
+          <div class="flex flex-wrap -mx-4">
+            <div class="w-full md:w-1/3 px-4">
+              <p
+                class="
+                  font-light
+                  text-sm text-white text-center
+                  md:text-left
+                  mb-3
+                  md:mb-0
+                "
+              >
+                © Okeezy 2021
+              </p>
+            </div>
+            <div class="w-full md:w-2/3 px-4">
+              <p
+                class="font-light text-sm text-white text-center md:text-right"
+              >
+                510 E El Camino Real suite C, CA 94087, United States
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ===== Footer End -->
+  </body>
+</html>

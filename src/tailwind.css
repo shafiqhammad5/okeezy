@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Shadows+Into+Light&display=swap");
+
+@tailwind base;
+
+@layer base {
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
+
+.gradient-btn {
+  background-image: linear-gradient(
+    94.74deg,
+    #deff03 0%,
+    #aeff08 50%,
+    #deff03 100%
+  );
+  background-size: 200% auto;
+  @apply transition-all duration-300;
+}
+
+.gradient-btn:hover {
+  background-position: right;
+}
+
+.stylish-font {
+  font-family: "Shadows Into Light", cursive;
+}
