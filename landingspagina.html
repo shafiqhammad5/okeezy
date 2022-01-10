@@ -18,16 +18,16 @@
       wow.init();
     </script>
   </head>
-  <body>
+  <body
+    x-data="
+    {
+      navbarOpen: false,
+    }
+  "
+    :class="navbarOpen ? 'overflow-y-hidden' : 'overflow-y-auto' "
+  >
     <!-- ===== Navbar Start -->
-    <header
-      x-data="
-      {
-        navbarOpen: false,
-      }
-    "
-      class="bg-[#040c21] top-0 left-0 w-full z-10"
-    >
+    <header class="bg-[#040c21] top-0 left-0 w-full z-10">
       <div class="container">
         <div class="flex items-center relative">
           <div class="w-60 flex items-center">
@@ -74,22 +74,24 @@
                 ></span>
               </button>
               <nav
-                :class="!navbarOpen && 'hidden' "
+                :class="navbarOpen ? 'translate-x-0' : 'translate-x-full lg:-translate-x-0' "
                 id="navbarCollapse"
                 class="
-                  absolute
+                  fixed
+                  z-50
                   py-5
                   px-4
                   bg-black
                   lg:bg-transparent
                   shadow
                   rounded-lg
-                  max-w-[250px]
-                  w-full
+                  w-[270px]
                   lg:max-w-full lg:w-full
-                  right-4
-                  top-full
+                  right-0
+                  top-0
                   lg:block lg:static lg:shadow-none
+                  transition-all
+                  h-full
                 "
               >
                 <ul class="blcok lg:flex">
@@ -146,6 +148,20 @@
                   </li>
                 </ul>
               </nav>
+              <div
+                :class="navbarOpen ? 'translate-x-0' : 'translate-x-full' "
+                @click="navbarOpen = false"
+                class="
+                  fixed
+                  w-full
+                  h-full
+                  bg-black bg-opacity-50
+                  top-0
+                  left-0
+                  z-30
+                  lg:hidden
+                "
+              ></div>
             </div>
             <div
               class="
@@ -472,7 +488,7 @@
                 lg:absolute
                 -z-10
                 right-0
-                lg:bottom-[-155px]
+                bottom-0
                 wow
                 fadeInUp
               "

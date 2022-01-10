@@ -536,14 +536,6 @@ body {
   top: -8px;
 }
 
-.right-4{
-  right: 1rem;
-}
-
-.top-full{
-  top: 100%;
-}
-
 .bottom-0{
   bottom: 0px;
 }
@@ -592,12 +584,16 @@ body {
   z-index: 10;
 }
 
-.-z-10{
-  z-index: -10;
-}
-
 .z-50{
   z-index: 50;
+}
+
+.z-30{
+  z-index: 30;
+}
+
+.-z-10{
+  z-index: -10;
 }
 
 .my-\[6px\]{
@@ -723,6 +719,10 @@ body {
   height: 2px;
 }
 
+.h-full{
+  height: 100%;
+}
+
 .h-5{
   height: 1.25rem;
 }
@@ -741,10 +741,6 @@ body {
 
 .h-\[250px\]{
   height: 250px;
-}
-
-.h-full{
-  height: 100%;
 }
 
 .h-20{
@@ -775,6 +771,10 @@ body {
   max-height: 0px;
 }
 
+.max-h-\[1000px\]{
+  max-height: 1000px;
+}
+
 .min-h-screen{
   min-height: 100vh;
 }
@@ -799,6 +799,10 @@ body {
   width: 30px;
 }
 
+.w-\[270px\]{
+  width: 270px;
+}
+
 .w-5{
   width: 1.25rem;
 }
@@ -821,10 +825,6 @@ body {
 
 .max-w-full{
   max-width: 100%;
-}
-
-.max-w-\[250px\]{
-  max-width: 250px;
 }
 
 .max-w-\[54px\]{
@@ -881,6 +881,16 @@ body {
 
 .-translate-y-1\/2{
   --tw-translate-y: -50%;
+  transform: var(--tw-transform);
+}
+
+.translate-x-0{
+  --tw-translate-x: 0px;
+  transform: var(--tw-transform);
+}
+
+.translate-x-full{
+  --tw-translate-x: 100%;
   transform: var(--tw-transform);
 }
 
@@ -971,6 +981,14 @@ body {
 
 .overflow-hidden{
   overflow: hidden;
+}
+
+.overflow-y-auto{
+  overflow-y: auto;
+}
+
+.overflow-y-hidden{
+  overflow-y: hidden;
 }
 
 .rounded-lg{
@@ -1076,6 +1094,10 @@ body {
 .bg-gradient2{
   --tw-bg-opacity: 1;
   background-color: rgb(174 255 8 / var(--tw-bg-opacity));
+}
+
+.bg-opacity-50{
+  --tw-bg-opacity: 0.5;
 }
 
 .bg-opacity-60{
@@ -1188,11 +1210,6 @@ body {
 .py-9{
   padding-top: 2.25rem;
   padding-bottom: 2.25rem;
-}
-
-.py-12{
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 
 .py-6{
@@ -1514,6 +1531,22 @@ body {
   transition-duration: 150ms;
 }
 
+.duration-300{
+  transition-duration: 300ms;
+}
+
+.duration-500{
+  transition-duration: 500ms;
+}
+
+.ease-in-out{
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ease-linear{
+  transition-timing-function: linear;
+}
+
 .gradient-btn {
   background-image: linear-gradient(
     94.74deg,
@@ -1533,6 +1566,10 @@ body {
 
 .stylish-font {
   font-family: "Shadows Into Light", cursive;
+}
+
+.faq {
+  transition: max-height 0.5s;
 }
 
 .hover\:bg-white:hover{
@@ -1770,10 +1807,6 @@ body {
     position: absolute;
   }
 
-  .lg\:bottom-\[-155px\]{
-    bottom: -155px;
-  }
-
   .lg\:bottom-0{
     bottom: 0px;
   }
@@ -1848,6 +1881,11 @@ body {
 
   .lg\:max-w-\[350px\]{
     max-width: 350px;
+  }
+
+  .lg\:-translate-x-0{
+    --tw-translate-x: -0px;
+    transform: var(--tw-transform);
   }
 
   .lg\:rounded-none{

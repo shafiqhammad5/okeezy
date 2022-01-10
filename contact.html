@@ -18,16 +18,16 @@
       wow.init();
     </script>
   </head>
-  <body>
+  <body
+    x-data="
+    {
+      navbarOpen: false,
+    }
+  "
+    :class="navbarOpen ? 'overflow-y-hidden' : 'overflow-y-auto' "
+  >
     <!-- ===== Navbar Start -->
-    <header
-      x-data="
-      {
-        navbarOpen: false,
-      }
-    "
-      class="bg-[#040c21] top-0 left-0 w-full z-10"
-    >
+    <header class="bg-[#040c21] top-0 left-0 w-full z-10">
       <div class="container">
         <div class="flex items-center relative">
           <div class="w-60 flex items-center">
@@ -74,22 +74,24 @@
                 ></span>
               </button>
               <nav
-                :class="!navbarOpen && 'hidden' "
+                :class="navbarOpen ? 'translate-x-0' : 'translate-x-full lg:-translate-x-0' "
                 id="navbarCollapse"
                 class="
-                  absolute
+                  fixed
+                  z-50
                   py-5
                   px-4
                   bg-black
                   lg:bg-transparent
                   shadow
                   rounded-lg
-                  max-w-[250px]
-                  w-full
+                  w-[270px]
                   lg:max-w-full lg:w-full
-                  right-4
-                  top-full
+                  right-0
+                  top-0
                   lg:block lg:static lg:shadow-none
+                  transition-all
+                  h-full
                 "
               >
                 <ul class="blcok lg:flex">
@@ -146,6 +148,20 @@
                   </li>
                 </ul>
               </nav>
+              <div
+                :class="navbarOpen ? 'translate-x-0' : 'translate-x-full' "
+                @click="navbarOpen = false"
+                class="
+                  fixed
+                  w-full
+                  h-full
+                  bg-black bg-opacity-50
+                  top-0
+                  left-0
+                  z-30
+                  lg:hidden
+                "
+              ></div>
             </div>
             <div
               class="
@@ -558,16 +574,26 @@
                         items-center
                         justify-center
                         ml-3
+                        transition-all
+                        duration-300
                       "
                       x-text="faqOneOpen ? '-' : '+' "
                     >
                     </span>
                   </button>
                   <div
-                    :class="faqOneOpen ? 'max-h-auto' : 'max-h-0' "
-                    class="transition-all overflow-hidden"
+                    :class="faqOneOpen ? 'max-h-[1000px]' : 'max-h-0' "
+                    class="transition-all overflow-hidden duration-300"
                   >
-                    <p class="text-sm text-black leading-relaxed mb-5">
+                    <p
+                      class="
+                        text-sm text-black
+                        leading-relaxed
+                        mb-5
+                        transition-all
+                        duration-300
+                      "
+                    >
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Quis ipsum suspendisse ultrices gravida.
@@ -613,16 +639,26 @@
                         items-center
                         justify-center
                         ml-3
+                        transition-all
+                        duration-300
                       "
                       x-text="faqTwoOpen ? '-' : '+' "
                     >
                     </span>
                   </button>
                   <div
-                    :class="faqTwoOpen ? 'max-h-auto' : 'max-h-0' "
-                    class="transition-all overflow-hidden"
+                    :class="faqTwoOpen ? 'max-h-[1000px]' : 'max-h-0' "
+                    class="transition-all overflow-hidden duration-300"
                   >
-                    <p class="text-sm text-black leading-relaxed mb-5">
+                    <p
+                      class="
+                        text-sm text-black
+                        leading-relaxed
+                        mb-5
+                        transition-all
+                        duration-300
+                      "
+                    >
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Quis ipsum suspendisse ultrices gravida.
@@ -668,16 +704,26 @@
                         items-center
                         justify-center
                         ml-3
+                        transition-all
+                        duration-300
                       "
                       x-text="faqThreeOpen ? '-' : '+' "
                     >
                     </span>
                   </button>
                   <div
-                    :class="faqThreeOpen ? 'max-h-auto' : 'max-h-0' "
-                    class="transition-all overflow-hidden"
+                    :class="faqThreeOpen ? 'max-h-[1000px]' : 'max-h-0' "
+                    class="transition-all overflow-hidden duration-300"
                   >
-                    <p class="text-sm text-black leading-relaxed mb-5">
+                    <p
+                      class="
+                        text-sm text-black
+                        leading-relaxed
+                        mb-5
+                        transition-all
+                        duration-300
+                      "
+                    >
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Quis ipsum suspendisse ultrices gravida.
@@ -723,16 +769,26 @@
                         items-center
                         justify-center
                         ml-3
+                        transition-all
+                        duration-300
                       "
                       x-text="faqFourOpen ? '-' : '+' "
                     >
                     </span>
                   </button>
                   <div
-                    :class="faqFourOpen ? 'max-h-auto' : 'max-h-0' "
-                    class="transition-all overflow-hidden"
+                    :class="faqFourOpen ? 'max-h-[1000px]' : 'max-h-0' "
+                    class="transition-all overflow-hidden duration-300"
                   >
-                    <p class="text-sm text-black leading-relaxed mb-5">
+                    <p
+                      class="
+                        text-sm text-black
+                        leading-relaxed
+                        mb-5
+                        transition-all
+                        duration-300
+                      "
+                    >
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Quis ipsum suspendisse ultrices gravida.
@@ -778,16 +834,26 @@
                         items-center
                         justify-center
                         ml-3
+                        transition-all
+                        duration-300
                       "
                       x-text="faqFiveOpen ? '-' : '+' "
                     >
                     </span>
                   </button>
                   <div
-                    :class="faqFiveOpen ? 'max-h-auto' : 'max-h-0' "
-                    class="transition-all overflow-hidden"
+                    :class="faqFiveOpen ? 'max-h-[1000px]' : 'max-h-0' "
+                    class="transition-all overflow-hidden duration-300"
                   >
-                    <p class="text-sm text-black leading-relaxed mb-5">
+                    <p
+                      class="
+                        text-sm text-black
+                        leading-relaxed
+                        mb-5
+                        transition-all
+                        duration-300
+                      "
+                    >
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Quis ipsum suspendisse ultrices gravida.
@@ -872,7 +938,7 @@
                 lg:absolute
                 -z-10
                 right-0
-                lg:bottom-[-155px]
+                bottom-0
                 wow
                 fadeInUp
               "

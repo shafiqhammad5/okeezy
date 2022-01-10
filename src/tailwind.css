@@ -29,3 +29,7 @@
 .stylish-font {
   font-family: "Shadows Into Light", cursive;
 }
+
+.faq {
+  transition: max-height 0.5s;
+}

@@ -18,7 +18,14 @@
       wow.init();
     </script>
   </head>
-  <body>
+  <body
+    x-data="
+    {
+      navbarOpen: false,
+    }
+  "
+    :class="navbarOpen ? 'overflow-y-hidden' : 'overflow-y-auto' "
+  >
     <div class="flex items-center justify-center min-h-screen">
       <div class="container">
         <div class="flex flex-wrap items-center -mx-4">
